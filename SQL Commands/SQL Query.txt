@@ -1,0 +1,19 @@
+//Query1: To fetch Last_Name and Mem_ID having House_Address is '23rd Floor, Goletha House'
+
+select Last_Name, Mem_ID from Member where House_Address = '23rd Floor, Goletha House'
+
+//Query2: To fetch Cost for 1 year Membership
+
+select Plan_Cost from Membership where Plan_Type = '1 Year'
+
+//Query3: To fetch Reg_ID and Mem_ID that who enter in gym at 4:00
+
+select Reg_ID, Mem_ID from Register where Entry_Time = '4:00'
+
+//Query4: To fetch Instructor email id and phone no having Ins_ID is I0000002 
+
+select Ins_Email_ID, Ins_Phone_No from Personal_Instructor where Ins_ID = 'I0000002'
+
+//Query5: To fetch appointment of personal instructor
+
+select Time_Appointed from Appoints
