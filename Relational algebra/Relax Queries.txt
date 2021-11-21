@@ -1,11 +1,14 @@
-1) Show all the phone numbers of the instructor of Ins_ID = 'I0000001'
+1) Show  the full name and member ID of the members who's fat percentage is below 20 and weight change is greater than 2
+π Mem_ID,First_Name,Last_Name (σ (Fat_percentage < 20 and Weight_Change > 2) (Member⨝Monthly_Analysis))
+
+2) Show all the phone numbers of the instructor of Ins_ID = 'I0000001'
 π Ins_ID,First_Name,Last_Name,Phone_Nos (σ Ins_ID = 'I0000001' ((Users ⨝ Phone_No) ⨝ Personal_Instructor))
 
-2) Show all the member names and instructor name where, member appointed instructor
+3) Show all the member names and instructor name where, member appointed instructor
 π Mem.Mem_ID,Mem.First_Name,Mem.Last_Name,Ins.Ins_ID,Ins.First_Name,Ins.Last_Name (σ Appoints.Ins_ID = Ins.Ins_ID (ρ Mem Member ⨝ Appoints ⨯ ρ Ins Personal_Instructor))
 
-3) Find out the Mem_ID, First_Name, Last_Name, Register Day, Weight_Change and Fat_Percentage of those Members whose Membership Expired
+4) Find out the Mem_ID, First_Name, Last_Name, Register Day, Weight_Change and Fat_Percentage of those Members whose Membership Expired
 π Mem_ID,First_Name,Last_Name,Register_Day,Weight_Change,Fat_percentage ((π Reg.Mem_ID (ρ Reg Register ⨯ Member) - π Mem_ID Member) ⨝ (ρ Reg Register) ⨝ (ρ Ana Monthly_Analysis))
 
-4) Find the membership of those members who have appointed an instructor and show the membership plan type, cost and instructor fees
+5) Find the membership of those members who have appointed an instructor and show the membership plan type, cost and instructor fees
 π Mem_ID,First_Name,Last_Name,Plan_Type,Plan_Cost,Ins_Fees (((π Mem_ID,First_Name,Last_Name,Plan_Type (ρ Mem Member⨝Appoints))⨝Membership)⨝(π Ins_ID,Ins_Fees ρ Ins Personal_Instructor⨝Appoints))
