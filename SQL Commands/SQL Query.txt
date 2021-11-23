@@ -17,3 +17,10 @@ select Ins_Email_ID, Ins_Phone_No from Personal_Instructor where Ins_ID = 'I0000
 //Query5: To fetch appointment of personal instructor
 
 select Time_Appointed from Appoints
+
+
+
+
+
+1) Find the Instructor details of Ins_ID 'I0000008' along with the member they are instructing and their monthly analysis after appointing an instructor.
+select Ins.Ins_ID, Ins.First_Name, Ins.Last_Name, Mem.Mem_ID, Mem.First_Name, Mem.Last_Name, Ana.Month_Name, Ana.Weight_Change, Ana.Fat_percentage from Member as Mem natural join Appoints natural join Monthly_Analysis as Ana, Personal_Instructor as Ins where Appoints.Ins_ID = Ins.Ins_ID and Ins.Ins_ID = 'I0000008';
