@@ -1,5 +1,5 @@
 1) Show  the full name and member ID of the members who's fat percentage is below 20 and weight change is greater than 2
-π Mem_ID,First_Name,Last_Name (σ (Fat_percentage < 20 and Weight_Change > 2) (Member⨝Monthly_Analysis))
+π Mem_ID,First_Name,Last_Name (σ (Fat_percentage < 20 and Weight_Change > 2) (Users⨝Member⨝Monthly_Analysis))
 
 2) Show all the phone numbers of the instructor of Ins_ID = 'I0000001'
 π Ins_ID,First_Name,Last_Name,Phone_Nos (σ Ins_ID = 'I0000001' ((Users ⨝ Phone_No) ⨝ Personal_Instructor))
